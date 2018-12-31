@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  integration-test:
+    container_name: integration-test
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+    ports:
+      - '4200:4200'
